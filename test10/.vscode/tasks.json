@@ -16,6 +16,7 @@
                 "isDefault": true
             }
         },
+        
         // 바이너리 실행
         {
             "label": "execute",
