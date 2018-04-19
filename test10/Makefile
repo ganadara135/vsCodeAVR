@@ -7,7 +7,7 @@ INC=F:\MinGW\msys\1.0\home\gmp-6.1.2
 LIBS=F:\MinGW\msys\1.0\home\gmp-6.1.2
 CFLAGS=-g -Wall
 OBJDIR=Debug
-_OBJS=aes.o bignum256.o test_helpers.o endian.o
+_OBJS=aes.o bignum256.o test_helpers.o endian.o hash.o sha256.o ripemd160.o
 myOBJS= $(patsubst %,$(OBJDIR)/%,$(_OBJS))
 C_DEPS +=  \
 	aes.d \
@@ -23,9 +23,6 @@ blockFirst:
 
 printVar: blockFirst
 	@echo $<
-
-%_dbg.o: %.c
-	$(CC) -g -o $@ ${CFLAG} -c $<
 
 move:
 	@echo msg: move object files
@@ -55,10 +52,20 @@ bignum256.o: bignum256.c
 test_helpers.o: test_helpers.c
 	$(CC) -g -c $<
 
+hash.o: hash.c
+	$(CC) -g -c $<
+
+sha256.o: sha256.c
+	$(CC) -g -c $<
+
+ripemd160.o: ripemd160.c
+	$(CC) -g -c $<
+
 
 
 #%.o: %.c
 #	$(CC) -g -c $< 
+
 
 #allsrc: $(SRCS)
 #	$(CC) -g -c $^ -I$(LIBS)\gmp\include
@@ -69,7 +76,9 @@ test_helpers.o: test_helpers.c
 
 
 
-
+%.o: %.c
+	@echo test10
+	$(CC) -g -o $@ ${CFLAG} -c $<
 ppp: $(_OBJS)
 	@echo $^
 

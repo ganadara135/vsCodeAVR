@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "test_helpers.h": "c",
-        "string.h": "c",
-        "aes.h": "c",
-        "stdlib.h": "c",
-        "common.h": "c"
-    }
-}

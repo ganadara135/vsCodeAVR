@@ -32,10 +32,11 @@
   * This file is licensed as described by the file LICENCE.
   */
  
-#define TEST_BIGNUM256
-#define TEST
-//#define PLATFORM_SPECIFIC_BIGMULTIPLY
+//#define TEST_BIGNUM256
+//#define TEST
 
+
+//#define PLATFORM_SPECIFIC_BIGMULTIPLY
 
 #ifdef TEST
 #include <assert.h>
@@ -44,8 +45,8 @@
 #ifdef TEST_BIGNUM256
 #include <stdlib.h>
 #include <stdio.h>
-//#include <gmp.h>
-#include "F:\MinGW\msys\1.0\home\gmp-6.1.2\gmp.h"
+#include <gmp.h>
+//#include "F:\MinGW\msys\1.0\home\gmp-6.1.2\gmp.h"
 #include "endian.h"
 #include "test_helpers.h"
 #endif // #ifdef TEST_BIGNUM256
