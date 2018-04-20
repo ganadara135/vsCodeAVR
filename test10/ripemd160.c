@@ -11,8 +11,8 @@
   *
   * This file is licensed as described by the file LICENCE.
   */
- #define TEST_RIPEMD160
- #define TEST
+// #define TEST_RIPEMD160
+// #define TEST
 
 
 #ifdef TEST_RIPEMD160
