@@ -39,7 +39,7 @@
   *
   * This file is licensed as described by the file LICENCE.
   */
-#define TEST_HMAC_DRBG
+//#define TEST_HMAC_DRBG
 
 
 #ifdef TEST_HMAC_DRBG
